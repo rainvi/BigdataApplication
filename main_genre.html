@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>영화 저장소</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&family=Song+Myung&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="top">
+        <div id="mypage">
+          <a href="mypage.html" class="link">
+            <span class="blind">마이페이지</span>
+          </a>
+          <a class="link">
+            <span class="blind">[닉네임 불러오기]</span>
+          </a>
+        </div>
+        <div id="header">
+          <h1 class="title">호r연이💞으l 달콤🧁살벌🔨한 영화 저😋장소</h1>
+          <div class="sch">
+            <div class="search_type">
+              <input placeholder="영화명, 배우를 입력해주세요" class="input" type="text">
+            </div>
+            <button id="sch_btn" class="search_type" class="input" type="submit" title="검색" //onclick="window.nclick(this,'sch.action','','',event);"
+              / />검색</button>
+          </div>
+        </div>
+        <div id="serve_menu">
+          <ul class="list_nav">
+            <li class="nav_item"><a href="main.html">인기순</a></li> |
+            <li class="nav_item"><a href="main_genre.html">장르별</a></li> |
+            <li class="nav_item"><a href="main_age.html">연령별</a></li> |
+            <li class="nav_item"><a href="main_ott.html">OTT별</a></li> |
+            <li class="nav_item"><a href="main_playlist.html">플레이리스트</a></li>
+          </ul>
+        </div>
+      </div>
+    
+      <div id="container">
+        <div class="recommend">
+          <div id="mov_top"> - </div>
+        </div>
+        <div id="filter" class="search_type">
+          <select name="genre" id="filter_btn">
+            <option value="all_g" selected>장르 선택</option>
+            <option value="drama">드라마</option>
+            <option value="comedy">코미디</option>
+            <option value="action">액션</option>
+            <option value="romance">멜로/로맨스</option>
+            <option value="thriller">스릴러</option>
+            <option value="mystery">미스터리</option>
+            <option value="horror">공포(호러)</option>
+            <option value="adventure">어드벤처</option>
+            <option value="crime">범죄</option>
+            <option value="family">가족</option>
+            <option value="fantasy">판타지</option>
+            <option value="SF">SF</option>
+            <option value="western">서부극(웨스턴)</option>
+            <option value="KR">사극</option>
+            <option value="animation">애니메이션</option>
+            <option value="documentary">다큐멘터리</option>
+            <option value="war">전쟁</option>
+            <option value="musical">뮤지컬</option>
+            <option value="adult">성인물(에로)</option>
+            <option value="show">공연</option>
+            <option value="etc">기타</option>
+          </select>
+        </div>
+        <div class="type">
+          <div class="gallery">
+            <div id="mov1" class="movie"> - </div>
+            <div id="mov2" class="movie"> - </div>
+            <div id="mov3" class="movie"> - </div>
+            <div id="mov4" class="movie"> - </div>
+            <div id="mov5" class="movie"> - </div>
+            <div id="mov6" class="movie"> - </div>
+            <div id="mov7" class="movie"> - </div>
+            <div id="mov8" class="movie"> - </div>
+            <div id="mov9" class="movie"> - </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+    <script src="main.js"> </script>
+  </body>
+</html>

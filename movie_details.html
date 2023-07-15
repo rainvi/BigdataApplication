@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>영화 저장소</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&family=Song+Myung&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="top">
+            <div id="header">
+                <h1 class="title">호r연이💞으l 달콤🧁살벌🔨한 영화 저😋장소</h1>
+            </div>
+            <div>
+                <a href="main.html" class="link">
+                    <div id="back">
+                        < 메인페이지로 돌아가기</div>
+                </a>
+            </div>
+        </div>
+        <form action="movieDetailPage.php" method = "GET">
+            <input type = "text" name = "Mid" value = "20223742">
+            <input type = "text" name = "Uid" value = "1234">
+            <input type = "text" name = "review" value = "리뷰를 입력하세요">
+            <input type = "submit" name = "submit" value = "불러와랏">
+        </form>
+        <div id="container">
+                <div id="movie_info">
+                    <div class="movie_img">-</div>
+                    <div class="total_info">
+                        <div id="title_star">
+                            <form name="convertform" id="convertform" method="post" action="./save">
+                                <fieldset>
+                                    <input type="checkbox" name="즐찾" id="like"><label for="like">⭐</label>
+                                </fieldset>
+                            </form>
+                            
+                            <h3>영화제목 불러오기</h3>
+                        </div>
+                        <div>
+                            <table id='movielist'>
+                                <tr>
+                                    <th class="table_info">개봉년도</th>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <th class="table_info">국가</th>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <th class="table_info">장르</th>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <th class="table_info">감독</th>
+                                    <td>-</td>
+                                </tr>
+                
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="star">
+                    <form name="myform" id="myform" method="post" action="./save">
+                        <fieldset>
+                            <legend>평가하기</legend>
+                            <input type="radio" name="rating" value="5" id="rate1"><label for="rate1">⭐</label>
+                            <input type="radio" name="rating" value="4" id="rate2"><label for="rate2">⭐</label>
+                            <input type="radio" name="rating" value="3" id="rate3"><label for="rate3">⭐</label>
+                            <input type="radio" name="rating" value="2" id="rate4"><label for="rate4">⭐</label>
+                            <input type="radio" name="rating" value="1" id="rate5"><label for="rate5">⭐</label>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="search_type">
+
+                    <form method = "GET" name = "frm">
+                        <input type = "hidden" name = "Mid" value = "20223742" >
+                        <br>코멘트 : </b></br>
+                        <input name = "review" class="input" type="text" value = "">
+                        <div id="log_btn">
+                            <input id="sch_btn" class="search_type" class="input" type="submit" value="삭제" onclick = "btn_click('delete')">
+                            <span></span>
+                            <input id="sch_btn" class="search_type" class="input" type="submit" value="수정" onclick = "btn_click('update')">
+                            <span></span>
+                            <input id="sch_btn" class="search_type" class="input" type="submit" value="입력" onclick = "btn_click('insert')">
+                        </div>
+                    </form>
+
+                    <script>
+                    function btn_click(str){                             
+                        if(str=="update"){                                 
+                        frm.action="movieDetailPage_review_update.php";      
+                        } else if(str=="delete"){      
+                            frm.action="movieDetailPage_review_delete.php";      
+                        }  else if (str == "insert"){
+                            frm.action="movieDetailPage_review_insert.php";
+                        }
+                    }
+                    </script>
+
+                </div>
+            </div>
+    </div>
+    <script src="main.js"> </script>
+</body>
+
+</html>
